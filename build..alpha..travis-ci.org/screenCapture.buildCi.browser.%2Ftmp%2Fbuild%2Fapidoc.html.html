@@ -1,0 +1,733 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/gstroup/apimocker#readme">apimocker (v0.5.0)</a>
+</h1>
+<h4>Simple HTTP server that returns mock service API responses to your front end.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apimocker">module apimocker</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apimocker.Gruntfile">
+            function <span class="apidocSignatureSpan">apimocker.</span>Gruntfile
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apimocker.createServer">
+            function <span class="apidocSignatureSpan">apimocker.</span>createServer
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apimocker.setConfigFile">
+            function <span class="apidocSignatureSpan">apimocker.</span>setConfigFile
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apimocker.start">
+            function <span class="apidocSignatureSpan">apimocker.</span>start
+            <span class="apidocSignatureSpan">(port, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apimocker.stop">
+            function <span class="apidocSignatureSpan">apimocker.</span>stop
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apimocker.Gruntfile">module apimocker.Gruntfile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apimocker.Gruntfile.Gruntfile">
+            function <span class="apidocSignatureSpan">apimocker.</span>Gruntfile
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apimocker.createServer">module apimocker.createServer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apimocker.createServer.createServer">
+            function <span class="apidocSignatureSpan">apimocker.</span>createServer
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apimocker.setConfigFile">module apimocker.setConfigFile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apimocker.setConfigFile.setConfigFile">
+            function <span class="apidocSignatureSpan">apimocker.</span>setConfigFile
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apimocker.start">module apimocker.start</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apimocker.start.start">
+            function <span class="apidocSignatureSpan">apimocker.</span>start
+            <span class="apidocSignatureSpan">(port, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.apimocker.stop">module apimocker.stop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.apimocker.stop.stop">
+            function <span class="apidocSignatureSpan">apimocker.</span>stop
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apimocker" id="apidoc.module.apimocker">module apimocker</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apimocker.Gruntfile" id="apidoc.element.apimocker.Gruntfile">
+        function <span class="apidocSignatureSpan">apimocker.</span>Gruntfile
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gruntfile = function (grunt) {
+    'use strict';
+
+    grunt.initConfig({
+
+        mochacli: {
+            options: {
+              globals: ['should'],
+              timeout: 3000,
+              ignoreLeaks: false,
+              ui: 'bdd',
+              reporter: 'spec'
+            },
+
+            all: { src: 'test/{,*/}*.js' }
+        },
+
+        watch: {
+            files: [
+                'Gruntfile.js',
+                'lib/apimocker.js',
+                'test/{,*/}*.js'
+            ],
+            tasks: ['jshint', 'test']
+        },
+
+        jshint: {
+            all: [
+                'Gruntfile.js',
+                'lib/apimocker.js',
+                'test/{,*/}*.js'
+            ]
+        }
+    });
+
+    grunt.loadNpmTasks('grunt-mocha-cli');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+
+    grunt.registerTask('test', [
+        'mochacli'
+    ]);
+
+    grunt.registerTask('default', [
+        'jshint',
+        'test'
+    ]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.apimocker.createServer" id="apidoc.element.apimocker.createServer">
+        function <span class="apidocSignatureSpan">apimocker.</span>createServer
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createServer = function (options) {
+	options = options || {};
+
+	function logger(msg, obj) {
+		if (!options.quiet) {
+			if (obj) {
+				console.log(msg, obj);
+			} else {
+				console.log(msg);
+			}
+		}
+	};
+
+	apiMocker.express = express();
+	apiMocker.middlewares = [];
+
+	var saveBody;
+	if (options.proxyURL) {
+		saveBody = function (req, res, buf) {
+			req.rawBody = buf;
+		};
+	}
+	apiMocker.middlewares.push(bodyParser.urlencoded({
+		extended: true,
+		verify: saveBody
+	}));
+	apiMocker.middlewares.push(bodyParser.json({
+		verify: saveBody
+	}));
+	apiMocker.middlewares.push(xmlparser());
+	apiMocker.middlewares.push(apiMocker.corsMiddleware);
+
+	// new in Express 4, we use a Router now.
+	apiMocker.router = express.Router();
+	apiMocker.middlewares.push(apiMocker.router);
+
+	if (options.proxyURL) {
+		logger("Proxying to " + options.proxyURL);
+		var proxyOptions = {
+		  forwardPath: function (req) {
+			logger("Forwarding request: " + req.originalUrl);
+			return req.originalUrl;
+		  }
+		};
+
+		if (options.proxyIntercept) {
+			var interceptPath = path.join(process.cwd(), options.proxyIntercept);
+			logger("Loading proxy intercept from " + interceptPath);
+			proxyOptions.intercept = require(interceptPath);
+		}
+
+		apiMocker.middlewares.push(function (req, res, next) {
+			if (req.rawBody) {
+				req.body = req.rawBody;
+			}
+			next();
+		});
+		apiMocker.middlewares.push(proxy(options.proxyURL, proxyOptions));
+	}
+
+	apiMocker.options = _.defaults(options, apiMocker.defaults);
+	apiMocker.log = logger;
+	return apiMocker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+For advanced users, apimocker accepts any custom middleware functions you'd like to add.  The `middlewares` property is an
+array of middleware functions you can modify.  Here's a basic example:
+```
+var apiMocker = require("../lib/apimocker.js");
+var customMiddleware = function(req, res, next) {
+		res.header('foo', 'bar');
+		next();
+	};
+var mocker = apiMocker.<span class="apidocCodeKeywordSpan">createServer</span>({quiet: true}).setConfigFile("test/test-config
+.json");
+mocker.middlewares.unshift(customMiddleware);
+mocker.start(null, done);
+```
+
+## Runtime configuration
+After starting apimocker, mocks can be configured using a simple http api.
+This http api can be called easily from your functional tests, to test your code's handling of different responses.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.apimocker.setConfigFile" id="apidoc.element.apimocker.setConfigFile">
+        function <span class="apidocSignatureSpan">apimocker.</span>setConfigFile
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setConfigFile = function (file) {
+	if (!file) {
+		return apiMocker;
+	} else if (path.sep !== file.substr(0,1)) {
+		//relative path from command line
+		apiMocker.configFilePath = path.resolve(process.cwd(), file);
+	} else {
+		apiMocker.configFilePath = file;
+	}
+	return apiMocker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+For advanced users, apimocker accepts any custom middleware functions you'd like to add.  The `middlewares` property is an
+array of middleware functions you can modify.  Here's a basic example:
+```
+var apiMocker = require("../lib/apimocker.js");
+var customMiddleware = function(req, res, next) {
+		res.header('foo', 'bar');
+		next();
+	};
+var mocker = apiMocker.createServer({quiet: true}).<span class="apidocCodeKeywordSpan">setConfigFile</span>("test/test-config
+.json");
+mocker.middlewares.unshift(customMiddleware);
+mocker.start(null, done);
+```
+
+## Runtime configuration
+After starting apimocker, mocks can be configured using a simple http api.
+This http api can be called easily from your functional tests, to test your code's handling of different responses.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.apimocker.start" id="apidoc.element.apimocker.start">
+        function <span class="apidocSignatureSpan">apimocker.</span>start
+        <span class="apidocSignatureSpan">(port, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (port, callback) {
+	apiMocker.createAdminServices();
+	apiMocker.loadConfigFile();
+	apiMocker.middlewares.forEach(function(mw) {
+		if (mw === apiMocker.router &amp;&amp; apiMocker.options.basepath) {
+			apiMocker.log('Using basepath: ', apiMocker.options.basepath);
+			apiMocker.express.use(apiMocker.options.basepath, mw);
+		} else {
+			apiMocker.express.use(mw);
+		}
+	});
+	port = port || apiMocker.options.port;
+	// console.log(JSON.stringify(apiMocker.options));
+	if (apiMocker.options.staticDirectory &amp;&amp; apiMocker.options.staticPath) {
+		apiMocker.express.use(apiMocker.options.staticPath, express.static(apiMocker.options.staticDirectory));
+	}
+
+	apiMocker.expressInstance = apiMocker.express.listen(port, callback);
+	apiMocker.log('Mock server listening on port ' + port);
+	return apiMocker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var apiMocker = require("../lib/apimocker.js");
+var customMiddleware = function(req, res, next) {
+		res.header('foo', 'bar');
+		next();
+	};
+var mocker = apiMocker.createServer({quiet: true}).setConfigFile("test/test-config.json");
+mocker.middlewares.unshift(customMiddleware);
+mocker.<span class="apidocCodeKeywordSpan">start</span>(null, done);
+```
+
+## Runtime configuration
+After starting apimocker, mocks can be configured using a simple http api.
+This http api can be called easily from your functional tests, to test your code's handling of different responses.
+
+### /admin/setMock
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.apimocker.stop" id="apidoc.element.apimocker.stop">
+        function <span class="apidocSignatureSpan">apimocker.</span>stop
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function (callback) {
+	if (apiMocker.expressInstance) {
+		apiMocker.log('Stopping mock server.');
+		apiMocker.expressInstance.close(callback);
+	}
+	return apiMocker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apimocker.Gruntfile" id="apidoc.module.apimocker.Gruntfile">module apimocker.Gruntfile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apimocker.Gruntfile.Gruntfile" id="apidoc.element.apimocker.Gruntfile.Gruntfile">
+        function <span class="apidocSignatureSpan">apimocker.</span>Gruntfile
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gruntfile = function (grunt) {
+    'use strict';
+
+    grunt.initConfig({
+
+        mochacli: {
+            options: {
+              globals: ['should'],
+              timeout: 3000,
+              ignoreLeaks: false,
+              ui: 'bdd',
+              reporter: 'spec'
+            },
+
+            all: { src: 'test/{,*/}*.js' }
+        },
+
+        watch: {
+            files: [
+                'Gruntfile.js',
+                'lib/apimocker.js',
+                'test/{,*/}*.js'
+            ],
+            tasks: ['jshint', 'test']
+        },
+
+        jshint: {
+            all: [
+                'Gruntfile.js',
+                'lib/apimocker.js',
+                'test/{,*/}*.js'
+            ]
+        }
+    });
+
+    grunt.loadNpmTasks('grunt-mocha-cli');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+
+    grunt.registerTask('test', [
+        'mochacli'
+    ]);
+
+    grunt.registerTask('default', [
+        'jshint',
+        'test'
+    ]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apimocker.createServer" id="apidoc.module.apimocker.createServer">module apimocker.createServer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apimocker.createServer.createServer" id="apidoc.element.apimocker.createServer.createServer">
+        function <span class="apidocSignatureSpan">apimocker.</span>createServer
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createServer = function (options) {
+	options = options || {};
+
+	function logger(msg, obj) {
+		if (!options.quiet) {
+			if (obj) {
+				console.log(msg, obj);
+			} else {
+				console.log(msg);
+			}
+		}
+	};
+
+	apiMocker.express = express();
+	apiMocker.middlewares = [];
+
+	var saveBody;
+	if (options.proxyURL) {
+		saveBody = function (req, res, buf) {
+			req.rawBody = buf;
+		};
+	}
+	apiMocker.middlewares.push(bodyParser.urlencoded({
+		extended: true,
+		verify: saveBody
+	}));
+	apiMocker.middlewares.push(bodyParser.json({
+		verify: saveBody
+	}));
+	apiMocker.middlewares.push(xmlparser());
+	apiMocker.middlewares.push(apiMocker.corsMiddleware);
+
+	// new in Express 4, we use a Router now.
+	apiMocker.router = express.Router();
+	apiMocker.middlewares.push(apiMocker.router);
+
+	if (options.proxyURL) {
+		logger("Proxying to " + options.proxyURL);
+		var proxyOptions = {
+		  forwardPath: function (req) {
+			logger("Forwarding request: " + req.originalUrl);
+			return req.originalUrl;
+		  }
+		};
+
+		if (options.proxyIntercept) {
+			var interceptPath = path.join(process.cwd(), options.proxyIntercept);
+			logger("Loading proxy intercept from " + interceptPath);
+			proxyOptions.intercept = require(interceptPath);
+		}
+
+		apiMocker.middlewares.push(function (req, res, next) {
+			if (req.rawBody) {
+				req.body = req.rawBody;
+			}
+			next();
+		});
+		apiMocker.middlewares.push(proxy(options.proxyURL, proxyOptions));
+	}
+
+	apiMocker.options = _.defaults(options, apiMocker.defaults);
+	apiMocker.log = logger;
+	return apiMocker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+For advanced users, apimocker accepts any custom middleware functions you'd like to add.  The `middlewares` property is an
+array of middleware functions you can modify.  Here's a basic example:
+```
+var apiMocker = require("../lib/apimocker.js");
+var customMiddleware = function(req, res, next) {
+		res.header('foo', 'bar');
+		next();
+	};
+var mocker = apiMocker.<span class="apidocCodeKeywordSpan">createServer</span>({quiet: true}).setConfigFile("test/test-config
+.json");
+mocker.middlewares.unshift(customMiddleware);
+mocker.start(null, done);
+```
+
+## Runtime configuration
+After starting apimocker, mocks can be configured using a simple http api.
+This http api can be called easily from your functional tests, to test your code's handling of different responses.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apimocker.setConfigFile" id="apidoc.module.apimocker.setConfigFile">module apimocker.setConfigFile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apimocker.setConfigFile.setConfigFile" id="apidoc.element.apimocker.setConfigFile.setConfigFile">
+        function <span class="apidocSignatureSpan">apimocker.</span>setConfigFile
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setConfigFile = function (file) {
+	if (!file) {
+		return apiMocker;
+	} else if (path.sep !== file.substr(0,1)) {
+		//relative path from command line
+		apiMocker.configFilePath = path.resolve(process.cwd(), file);
+	} else {
+		apiMocker.configFilePath = file;
+	}
+	return apiMocker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+For advanced users, apimocker accepts any custom middleware functions you'd like to add.  The `middlewares` property is an
+array of middleware functions you can modify.  Here's a basic example:
+```
+var apiMocker = require("../lib/apimocker.js");
+var customMiddleware = function(req, res, next) {
+		res.header('foo', 'bar');
+		next();
+	};
+var mocker = apiMocker.createServer({quiet: true}).<span class="apidocCodeKeywordSpan">setConfigFile</span>("test/test-config
+.json");
+mocker.middlewares.unshift(customMiddleware);
+mocker.start(null, done);
+```
+
+## Runtime configuration
+After starting apimocker, mocks can be configured using a simple http api.
+This http api can be called easily from your functional tests, to test your code's handling of different responses.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apimocker.start" id="apidoc.module.apimocker.start">module apimocker.start</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apimocker.start.start" id="apidoc.element.apimocker.start.start">
+        function <span class="apidocSignatureSpan">apimocker.</span>start
+        <span class="apidocSignatureSpan">(port, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (port, callback) {
+	apiMocker.createAdminServices();
+	apiMocker.loadConfigFile();
+	apiMocker.middlewares.forEach(function(mw) {
+		if (mw === apiMocker.router &amp;&amp; apiMocker.options.basepath) {
+			apiMocker.log('Using basepath: ', apiMocker.options.basepath);
+			apiMocker.express.use(apiMocker.options.basepath, mw);
+		} else {
+			apiMocker.express.use(mw);
+		}
+	});
+	port = port || apiMocker.options.port;
+	// console.log(JSON.stringify(apiMocker.options));
+	if (apiMocker.options.staticDirectory &amp;&amp; apiMocker.options.staticPath) {
+		apiMocker.express.use(apiMocker.options.staticPath, express.static(apiMocker.options.staticDirectory));
+	}
+
+	apiMocker.expressInstance = apiMocker.express.listen(port, callback);
+	apiMocker.log('Mock server listening on port ' + port);
+	return apiMocker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var apiMocker = require("../lib/apimocker.js");
+var customMiddleware = function(req, res, next) {
+		res.header('foo', 'bar');
+		next();
+	};
+var mocker = apiMocker.createServer({quiet: true}).setConfigFile("test/test-config.json");
+mocker.middlewares.unshift(customMiddleware);
+mocker.<span class="apidocCodeKeywordSpan">start</span>(null, done);
+```
+
+## Runtime configuration
+After starting apimocker, mocks can be configured using a simple http api.
+This http api can be called easily from your functional tests, to test your code's handling of different responses.
+
+### /admin/setMock
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.apimocker.stop" id="apidoc.module.apimocker.stop">module apimocker.stop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.apimocker.stop.stop" id="apidoc.element.apimocker.stop.stop">
+        function <span class="apidocSignatureSpan">apimocker.</span>stop
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function (callback) {
+	if (apiMocker.expressInstance) {
+		apiMocker.log('Stopping mock server.');
+		apiMocker.expressInstance.close(callback);
+	}
+	return apiMocker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
