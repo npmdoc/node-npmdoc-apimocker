@@ -1,4 +1,7 @@
-# api documentation for  [apimocker (v0.5.0)](https://github.com/gstroup/apimocker#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-apimocker.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-apimocker) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-apimocker.svg)](https://travis-ci.org/npmdoc/node-npmdoc-apimocker)
+# npmdoc-apimocker
+
+#### basic api documentation for  [apimocker (v0.5.0)](https://github.com/gstroup/apimocker#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-apimocker.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-apimocker) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-apimocker.svg)](https://travis-ci.org/npmdoc/node-npmdoc-apimocker)
+
 #### Simple HTTP server that returns mock service API responses to your front end.
 
 [![NPM](https://nodei.co/npm/apimocker.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/apimocker)
